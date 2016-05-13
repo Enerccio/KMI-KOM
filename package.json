@@ -1,0 +1,8 @@
+{
+  "name": "compress-utilities",
+  "version": "0.0.1",
+  "dependencies": {
+    "fastpriorityqueue": "0.0.16",
+    "yargs": "^4.7.0"
+  }
+}
