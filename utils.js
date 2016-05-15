@@ -140,6 +140,13 @@ DynamicBuffer.prototype.uwrite = function(_byte) {
 	return this;
 };
 
+DynamicBuffer.prototype.uwrite16 = function(_short) {
+	ensureSize.call(this, 2);
+	this.buffer.writeUInt16LE(_short, this.length);
+	this.length += 2;
+	return this;
+};
+
 /**
  * append a javascript (V8) buffer or DynamicBuffer to this one
  * and return it for chaining

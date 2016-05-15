@@ -127,7 +127,6 @@ ArchiveOutputStream.prototype.addFile = function(file, base) {
 ArchiveOutputStream.prototype._addDirectoryToStream = function(path, base) {
 	this.uncompressed_data.uwrite(DIRECTORY_TYPE);
 	this._addPathName(path, base);
-	++this.count;
 };
 
 ArchiveOutputStream.prototype._addFileToStream = function(path, base) {
@@ -157,6 +156,7 @@ ArchiveOutputStream.prototype._addPathName = function(path, base) {
 	for (i = 0; i < count; i++) {
 		this.uncompressed_data.uwrite(path.charCodeAt(i));
 	}
+	++this.count;
 };
 
 ArchiveOutputStream.prototype.compress = function(of) {
