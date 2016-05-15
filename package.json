@@ -2,6 +2,7 @@
   "name": "compress-utilities",
   "version": "0.0.1",
   "dependencies": {
+    "bit-buffer": "0.0.3",
     "fastpriorityqueue": "0.0.16",
     "yargs": "^4.7.0"
   }

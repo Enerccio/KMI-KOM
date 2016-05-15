@@ -153,7 +153,8 @@ DynamicBuffer.prototype.concat = function(_buffer) {
 	return this;
 };
 
-function bit2byte(bits, zeropad) {
+function bit2byte(bits) {
+	bits.reverse();
 	var byte = 0;
 	for (var i = 0; i < bits.length; i++) {
 		var adjoff = 7 - i;

@@ -13,7 +13,7 @@ NoCompress.prototype.compress = function(udata) {
 	data.uwrite(HEADER_A);
 	data.uwrite(HEADER_B);
 	data.uwrite(HEADER_C);
-	for (var i=0; i<udata.length; i++) {
+	for (var i = 0; i < udata.length; i++) {
 		data.uwrite(udata[i]);
 	}
 	var resultBuffer = data.getBuffer();
@@ -24,12 +24,11 @@ NoCompress.prototype.compress = function(udata) {
 
 NoCompress.prototype.decompress = function(cdata) {
 	var data = new _utils.DynamicBuffer();
-	for (var i=3; i<cdata.length; i++) {
+	for (var i = 3; i < cdata.length; i++) {
 		data.uwrite(cdata[i]);
 	}
 	var resultBuffer = data.getBuffer();
-	console.log("Decompression finished: decompressed from " + cdata.length + " bytes to " + resultBuffer.length + " bytes (" +
-		(100.0 / cdata.length) * resultBuffer.length + "%)");
+	console.log("Decompression finished: decompressed from " + cdata.length + " bytes to " + resultBuffer.length + " bytes");
 	return resultBuffer;
 };
 
