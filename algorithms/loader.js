@@ -5,6 +5,7 @@ require('./nocompress.js').register(algs);
 require('./huffman.js').register(algs);
 require('./lz77.js').register(algs);
 require('./lz78.js').register(algs);
+require('./lzw.js').register(algs);
 
 exports.determineAlgorithm = function(stream, dataSetLength) {
 	var header = [stream[0], stream[1], stream[2]];

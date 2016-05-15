@@ -1,0 +1,4 @@
+node_modules
+testdata
+testdata2
+*.archive
